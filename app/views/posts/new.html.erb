@@ -1,0 +1,17 @@
+<%= form_for @post  do |p| %>
+
+
+  <div>
+    <%= p.label :title %>
+    <%= p.text_field :title %><em><%= @post.errors[:title].join(", ") %></em>
+  </div>
+
+  <div>
+    <%= p.label :body %>
+    <%= p.text_area :body %><em><%= @post.errors[:body].join(", ") %></em>
+
+  <div>
+    <%= p.submit %>
+  </div>
+
+<% end %>
